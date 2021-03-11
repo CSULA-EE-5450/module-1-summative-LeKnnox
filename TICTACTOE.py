@@ -55,7 +55,7 @@ class TicTacToe(object):
     def _winner(self):
         """
         checks if any player has won
-        :return:
+        :return: winningsymbol
         """
         winningsymbol = ''
         for rowcol in range(2):
@@ -68,7 +68,6 @@ class TicTacToe(object):
         if self._board[2][0] == self._board[1][1] == self._board[0][2]:
             winningsymbol = self._board[2][0]
         return winningsymbol
-
 
     def run(self):
         print(TICTACTOE_INSTRUCTIONS['English']['START'])
@@ -109,7 +108,7 @@ def main():
 
 if __name__ == '__main__':
     # logging.basicConfig(format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p', level=print)
-    main()  #run main function
+    main()
 
 
 
